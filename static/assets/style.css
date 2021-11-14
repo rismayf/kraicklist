@@ -146,7 +146,7 @@ body {
 
 .card-container {
     background: #fff;
-    border: 1px solid #1ebebc;
+    border: 1px solid #ddd;
     padding: 20px;
     border-radius: 5px;
     box-shadow: rgb(49 53 59 / 12%) 0px 1px 6px 0px;
@@ -162,10 +162,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
 }
 
 .card-image {
-    max-height: 150px;
+    height: 150px;
+    object-fit: scale-down;
 }
 
 .card-button {

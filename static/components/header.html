@@ -47,11 +47,18 @@
                     let needSeeMore = false
 
                     if(result.content.length >= 100 ) {
-                        content = `${result.content.substring(0,100)}...`
+                        content = `${result.content.substring(0,100)} ...`
                         needSeeMore = true
                     } else {
                         content = `${result.content}`
                         needSeeMore = false
+                    }
+
+                    let title = null
+                    if (result.title.length >= 25) {
+                        title = `${result.title.substring(0, 25)} ...`
+                    } else {
+                        title = `${result.title}`
                     }
                     rows.push(
                         `
@@ -59,7 +66,7 @@
                                 <div class="card-image-container">
                                     <img class="card-image" src="${result.thumb_url}" />
                                 </div>
-                                <p class="card-title">${result.title}</p>
+                                <p class="card-title">${title}</p>
                                 <p class="card-content">
                                     ${content}
                                     ${needSeeMore == true ? `<span class="card-button">See More</span>` : ''}
