@@ -30,7 +30,7 @@ func main() {
 	}
 	// start server
 	fmt.Printf("Server is listening on %s...", port)
-	err = http.ListenAndServe(fmt.Sprintf(":%s", port), nil)
+	err = http.ListenAndServe(fmt.Sprintf("127.0.0.1:%s", port), nil)
 	if err != nil {
 		log.Fatalf("unable to start server due: %v", err)
 	}
@@ -98,7 +98,7 @@ func (s *Searcher) Load(filepath string) error {
 func (s *Searcher) Search(query string) ([]Record, error) {
 	var result []Record
 	for _, record := range s.records {
-		if strings.EqualFold(record.Title, query) || strings.EqualFold(record.Content, query) {
+		if strings.Contains(strings.ToLower(record.Title), strings.ToLower(query)) || strings.Contains(strings.ToLower(record.Content), strings.ToLower(query)) {
 			result = append(result, record)
 		}
 	}

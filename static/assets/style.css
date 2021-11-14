@@ -150,13 +150,37 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: rgb(49 53 59 / 12%) 0px 1px 6px 0px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-image-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image {
+    max-height: 150px;
+}
+
+.card-button {
+    width: 100%;
+    background: #1ebebc;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #1ebebc;
+    cursor: pointer;
+    height: 35px;
 }
 
 .no-result-container {
     width: 100%;
-    background: #fff;
     padding: 20px;
-    border-radius: 5px;
 }
 
 .no-result-title {
