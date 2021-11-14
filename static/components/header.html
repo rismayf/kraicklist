@@ -43,6 +43,16 @@
             updateList: (results) => {
                 const rows = [];
                 for (let result of results) {
+                    let content = null
+                    let needSeeMore = false
+
+                    if(result.content.length >= 100 ) {
+                        content = `${result.content.substring(0,100)}...`
+                        needSeeMore = true
+                    } else {
+                        content = `${result.content}`
+                        needSeeMore = false
+                    }
                     rows.push(
                         `
                             <div class="card-container">
@@ -50,7 +60,11 @@
                                     <img class="card-image" src="${result.thumb_url}" />
                                 </div>
                                 <p class="card-title">${result.title}</p>
-                                <button class="card-button" type="submit">Preview</button>  
+                                <p class="card-content">
+                                    ${content}
+                                    ${needSeeMore == true ? `<span class="card-button">See More</span>` : ''}
+                                </p>
+                                
                             </div>
                         `
                     );

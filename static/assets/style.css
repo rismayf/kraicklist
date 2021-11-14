@@ -169,13 +169,8 @@ body {
 }
 
 .card-button {
-    width: 100%;
-    background: #1ebebc;
-    color: #fff;
-    border-radius: 5px;
-    border: 1px solid #1ebebc;
     cursor: pointer;
-    height: 35px;
+    color: #1ebebc;
 }
 
 .no-result-container {
