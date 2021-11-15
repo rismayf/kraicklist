@@ -1,1 +1,1 @@
-web: kraicklist
+web: bin/kraicklist
