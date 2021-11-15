@@ -142,6 +142,7 @@ body {
 .card-title {
     font-weight: 800;
     color: #1ebebc;
+    cursor: pointer;
 }
 
 .card-container {
