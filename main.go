@@ -98,7 +98,7 @@ func (s *Searcher) Load(filepath string) error {
 func (s *Searcher) Search(query string) ([]Record, error) {
 	var result []Record
 	for _, record := range s.records {
-		if strings.Contains(record.Title, query) || strings.Contains(record.Content, query) {
+		if strings.Contains(strings.ToLower(record.Title), strings.ToLower(query)) || strings.Contains(strings.ToLower(record.Content), strings.ToLower(query)) {
 			result = append(result, record)
 		}
 	}

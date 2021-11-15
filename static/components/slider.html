@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="../assets/slick/slick-theme.css"/>
+    </head>
+<body>
+    <div class="slider-container">
+        <div class="slider-class">
+            <div class="slider">
+                <div class="slider-image-container">
+                    <img class="slider-image" src="../assets/image/slide1.jpg" >
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slider-image-container">
+                    <img class="slider-image" src="../assets/image/slide2.jpg" >
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slider-image-container">
+                    <img class="slider-image" src="../assets/image/slide3.jpg" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../assets/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider-class').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+        });
+    </script>
+</body>
+</html>
